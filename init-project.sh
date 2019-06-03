@@ -2,7 +2,8 @@
 script_dir=`dirname $(readlink -f "$0")`
 template_dir="${script_dir}/template"
 
-default_project_name="another-project"
+default_project_name=${PWD##*/}
+default_project_name=${default_project_name:-another-project}
 year=`date "+%Y"`
 readme_file='README.md'
 
