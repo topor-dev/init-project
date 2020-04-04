@@ -40,7 +40,7 @@ cp -rsT -- "${template_dir}" "${tmp_dir}"
 		mv 'pyproject.toml~' 'pyproject.toml'
 	
 	# generate readme
-	echo "= ${project_name}" > "${readme_file}~" 
+	echo "# ${project_name}" > "${readme_file}~"
 	mv "${readme_file}~" "${readme_file}"
 )
 cp -irLT -- "${tmp_dir}" "$PWD"
